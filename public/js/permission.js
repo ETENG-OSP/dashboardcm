@@ -5,6 +5,7 @@ function permissionConfig(nga, admin, config) {
 
   permission
     .listView()
+    // .infinitePagination(true)
     .fields([
 
       nga.field('id'),
@@ -23,6 +24,15 @@ function permissionConfig(nga, admin, config) {
       nga.field('roles', 'reference_many')
         .targetEntity(admin.getEntity('roles'))
         .targetField(nga.field('name'))
+    ])
+    .filters([
+      nga.field('code').pinned(true),
+      nga.field('platformId', 'reference')
+        .targetEntity(admin.getEntity('platforms'))
+        .targetField(nga.field('name'))
+        .pinned(true),
+      nga.field('url'),
+      nga.field('name')
     ])
     .listActions(['edit', 'delete']);
 

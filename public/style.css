@@ -1,0 +1,7 @@
+.multiple {
+  display: inline-block;
+}
+
+.table>tbody>tr>td {
+  line-height: 2;
+}

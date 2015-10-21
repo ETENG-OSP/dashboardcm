@@ -12,6 +12,10 @@ function roleConfig(nga, admin, config) {
         .targetEntity(admin.getEntity('permissions'))
         .targetField(nga.field('name'))
     ])
+    .filters([
+      nga.field('code').pinned(true),
+      nga.field('name')
+    ])
     .listActions(['edit', 'delete']);
 
   role

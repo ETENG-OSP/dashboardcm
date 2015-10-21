@@ -10,6 +10,9 @@ function userConfig(nga, admin, config) {
         .targetEntity(admin.getEntity('roles'))
         .targetField(nga.field('name'))
     ])
+    .filters([
+      nga.field('username').pinned(true)
+    ])
     .listActions(['edit', 'delete']);
 
   user

@@ -8,6 +8,10 @@ function platformConfig(nga, admin, config) {
       nga.field('name'),
       nga.field('code')
     ])
+    .filters([
+      nga.field('code').pinned(true),
+      nga.field('name')
+    ])
     .listActions(['edit', 'delete']);
 
   platform
