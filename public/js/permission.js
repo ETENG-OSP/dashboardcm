@@ -53,7 +53,8 @@ function permissionConfig(nga, admin, config) {
 
       nga.field('parentId', 'reference')
         .targetEntity(admin.getEntity('permissions'))
-        .targetField(nga.field('name')),
+        .targetField(nga.field('name'))
+        .remoteComplete(true),
 
       nga.field('platformId', 'reference')
         .targetEntity(admin.getEntity('platforms'))
