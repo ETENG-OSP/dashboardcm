@@ -11,8 +11,7 @@ function permissionConfig(nga, admin, config) {
       nga.field('id'),
       nga.field('name'),
       nga.field('code'),
-      nga.field('url'),
-      nga.field('description'),
+      nga.field('description', 'text'),
 
       nga.field('parentId', 'reference')
         .targetEntity(admin.getEntity('permissions'))
@@ -51,7 +50,7 @@ function permissionConfig(nga, admin, config) {
       nga.field('code'),
       nga.field('url'),
       nga.field('meta', 'json'),
-      nga.field('description'),
+      nga.field('description', 'text'),
 
       nga.field('parentId', 'reference')
         .targetEntity(admin.getEntity('permissions'))
