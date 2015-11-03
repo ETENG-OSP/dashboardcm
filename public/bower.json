@@ -10,13 +10,13 @@
     "tests"
   ],
   "dependencies": {
-    "ng-admin": "~0.8.0",
+    "ng-admin": "~0.9.0",
     "satellizer": "~0.12.5"
   },
   "overrides": {
     "satellizer": {
       "dependencies": {
-        "ng-admin": "~0.8.0"
+        "ng-admin": "~0.9.0"
       }
     }
   }
